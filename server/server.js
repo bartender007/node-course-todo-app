@@ -34,17 +34,7 @@ app.get('/todos', (req, res) => {
 // Get /todo/1234324
 app.get('/todos/:id', (req, res) => {
     const id = req.params.id
-
-    // Valid id using isValid
-        //404 - send back empty send
-
-    //findById
-        //success
-            // if todo - send it back
-            //if no todo - sned back 404 with empty body
-        //error
-            //400 - and send body back
-
+    
     if(!ObjectID.isValid(id)) {
         res.status(404).send()
     }   
